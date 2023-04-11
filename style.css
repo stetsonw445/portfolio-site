@@ -181,6 +181,7 @@ button[type="submit"]:hover {
 .card img {
   max-width: 100%;
   height: auto;
+  max-height: 90px;
   border-radius: 5px;
   margin-bottom: 20px;
 }
@@ -290,26 +291,3 @@ h1 {
 }
 
 
-.image-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-
-/* Hide the image initially */
-.fade-in {
-  opacity: 0;
-  
-}
-
-/* Add a transition effect to the opacity property */
-.fade-in {
-  transition: opacity 1s;
-  
-}
-
-/* Show the image with full opacity */
-.fade-in.visible {
-  opacity: 1;
-}
