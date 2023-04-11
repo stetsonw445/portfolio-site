@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stetson's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="change-color">Change Color</a></li>
+        </ul>
+    </nav>
+    <header>
+      <h1 id="header" class="animate" onmousemove="wave()">Welcome to Stetson's Portfolio!</h1>
+    </header>
+    
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I graduated from the University of North Texas College of Engineering with Summa Cum Laude honors for my Bachelor of Science in Computer Science degree. During the fall semester of 2022 (my last semester in school), I started working as a Software Engineer for Amdocs.
+            </p>
+            <p>
+              Since starting at Amdocs, I have gained numerous skills including working on enterprise level applications for one of the nation's largest telecommunications providers, working with relational databases on an enterprise level, writing custom software to correct errors on service orders, frontend web development, agile development, and so much more. 
+            </p>
+            <p>
+              I have a true passion for learning and am constantly keeping up to date with the latest technologies and development practices. 
+              I am excited to see where my career takes me, and to continue developing my skills with a team of amazing people!
+            </p>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <p>Enter professional and academic experience here</p>
+        </section>
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="card-container">
+            <div class="card">
+              <img src="images/Project1.jpeg" alt="Project 1">
+              <h3>Project 1</h3>
+              <p>Description of project 1</p>
+              <a href="https://github.com/project1" target="_blank">See Project</a>
+            </div>
+            <div class="card">
+              <img src="images/Project2.jpg" alt="Project 2">
+              <h3>Project 2</h3>
+              <p>Description of project 2</p>
+              <a href="https://github.com/project2" target="_blank">See Project</a>
+            </div>
+            <div class="card">
+              <img src="images/Project3.jpg" alt="Project 3">
+              <h3>Project 3</h3>
+              <p>Description of project 3</p>
+              <a href="https://github.com/project3" target="_blank">See Project</a>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="contact">
+  <h2>Contact</h2>
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Get in Touch</legend>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+    </fieldset>
+    <button type="submit">Contact Me</button>
+  </form>
+</section>
+    </main>
+    
+</body>
+</html>

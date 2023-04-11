@@ -1,0 +1,273 @@
+body {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 1rem;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.nav a.change-color {
+  cursor: pointer;
+}
+
+.background-gradient-1 {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+}
+
+.background-gradient-2 {
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+
+header {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: auto;
+  text-align: center;
+}
+
+.contact {
+  background-color: #f2f2f2;
+  padding: 50px 0;
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 20px;
+  width: 100px;
+  text-align: right;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  background-color: #0066cc;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #004499;
+}
+
+
+.projects {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  flex-basis: calc(33.33% - 20px);
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.card-description {
+  margin-top: auto;
+  text-align: center;
+}
+
+.card-description h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card a {
+  display: inline-block;
+  background-color: #0066cc;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card a:hover {
+  background-color: #004499;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 0;
+  vertical-align: top;
+}
+
+/* Define the animation */
+h1 {
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  90% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
