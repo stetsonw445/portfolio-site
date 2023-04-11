@@ -271,3 +271,45 @@ h1 {
   }
 }
 
+.background-gradient-1 .btn {
+  background-color: #4b6cb7;
+  color: #fff;
+}
+
+.background-gradient-1 .btn:hover {
+  background-color: #182848;
+}
+
+.background-gradient-2 .btn {
+  background-color: #833ab4;
+  color: #fff;
+}
+
+.background-gradient-2 .btn:hover {
+  background-color: #fd1d1d;
+}
+
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+/* Hide the image initially */
+.fade-in {
+  opacity: 0;
+  
+}
+
+/* Add a transition effect to the opacity property */
+.fade-in {
+  transition: opacity 1s;
+  
+}
+
+/* Show the image with full opacity */
+.fade-in.visible {
+  opacity: 1;
+}
