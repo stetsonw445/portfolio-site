@@ -59,25 +59,6 @@ function showImage() {
 // Add an event listener to show the image when the page is scrolled
 window.addEventListener('scroll', showImage);
 
-
-});
-
-
-
-
-let header = document.getElementById('header');
-		let timeoutId = null;
-
-		header.addEventListener('mousemove', function(event) {
-			header.classList.add('animate');
-			clearTimeout(timeoutId);
-
-			timeoutId = setTimeout(function() {
-				header.classList.remove('animate');
-			}, 2000);
-		});
-
-
 const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', (event) => {
@@ -108,3 +89,23 @@ form.addEventListener('submit', (event) => {
 
   xhr.send(JSON.stringify(data));
 });
+
+});
+
+
+
+
+let header = document.getElementById('header');
+		let timeoutId = null;
+
+		header.addEventListener('mousemove', function(event) {
+			header.classList.add('animate');
+			clearTimeout(timeoutId);
+
+			timeoutId = setTimeout(function() {
+				header.classList.remove('animate');
+			}, 2000);
+		});
+
+
+
