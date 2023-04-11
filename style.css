@@ -6,6 +6,8 @@ body {
   font-size: 16px;
 }
 
+
+
 nav {
   background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
@@ -81,9 +83,9 @@ section {
 }
 
 section h2 {
-  font-size: 2rem;
-  margin-bottom: auto;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
 }
 
 .contact {
@@ -149,12 +151,16 @@ button[type="submit"]:hover {
   background-color: #004499;
 }
 
+#contact-info-table {
+  display: none;
+}
 
 .projects {
   background-color: #fff;
   padding: 50px 0;
   text-align: center;
 }
+
 
 .card-container {
   display: flex;
@@ -219,8 +225,17 @@ button[type="submit"]:hover {
 }
 
 table {
-  width: 100%;
+  width: 50%;
   border-collapse: collapse;
+  margin-bottom: 10px;
+  align-items: center;
+  align-self: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 table td {
@@ -272,6 +287,11 @@ h1 {
   }
 }
 
+.btn {
+  background-color: #0066cc;
+  color: #fff;
+}
+
 .background-gradient-1 .btn {
   background-color: #4b6cb7;
   color: #fff;
@@ -289,5 +309,4 @@ h1 {
 .background-gradient-2 .btn:hover {
   background-color: #fd1d1d;
 }
-
 
