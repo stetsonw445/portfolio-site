@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   font-size: 16px;
+  transition: background-color 0.5s ease;
 }
 
 
@@ -35,7 +36,7 @@ nav a {
   color: #333;
   font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.4s ease;
 }
 
 nav a:hover {
@@ -47,12 +48,19 @@ nav a:hover {
   cursor: pointer;
 }
 
+nav span.fa {
+  padding-left: 7px;
+}
+
 .background-gradient-1 {
   background: linear-gradient(to right, #4b6cb7, #182848);
+  
 }
 
 .background-gradient-2 {
   background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  
+  
 }
 
 header {
@@ -80,6 +88,7 @@ section {
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  text-align: center;
 }
 
 section h2 {
@@ -138,7 +147,7 @@ textarea {
 button[type="submit"] {
   display: block;
   margin: 0 auto;
-  background-color: #0066cc;
+  background-color: #4b6cb7;
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;
@@ -147,8 +156,9 @@ button[type="submit"] {
   transition: all 0.2s ease-in-out;
 }
 
-button[type="submit"]:hover {
-  background-color: #004499;
+button:hover {
+  background-color: #182848;
+  transition: all 0.3s ease-in-out;
 }
 
 #contact-info-table {
@@ -181,7 +191,7 @@ button[type="submit"]:hover {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-7px);
 }
 
 .card img {
@@ -211,17 +221,18 @@ button[type="submit"]:hover {
 
 .card a {
   display: inline-block;
-  background-color: #0066cc;
+  background-color: #4b6cb7;
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 16px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .card a:hover {
-  background-color: #004499;
+  background-color: #182848;
+  transition: all 0.3s ease-in-out;
 }
 
 table {
@@ -241,72 +252,57 @@ table {
 table td {
   padding: 0;
   vertical-align: top;
+  font-weight: 500;
+  text-align: left;
 }
 
 /* Define the animation */
 h1 {
-  animation-name: wave;
-  animation-duration: 2s;
+  animation-name: spin;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
 }
 
 
-@keyframes wave {
+@keyframes spin {
   0% {
     transform: rotate(0deg);
   }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(10deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(10deg);
-  }
-  50% {
-    transform: rotate(-10deg);
-  }
-  60% {
-    transform: rotate(10deg);
-  }
-  70% {
-    transform: rotate(-10deg);
-  }
-  80% {
-    transform: rotate(10deg);
-  }
-  90% {
-    transform: rotate(-10deg);
-  }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
 
+.spinning {
+  animation: spin 1s linear;
+}
+
 .btn {
-  background-color: #0066cc;
+  background-color: #4b6cb7;
   color: #fff;
+  border-radius: 5px;
+  border: none;
 }
 
 .background-gradient-1 .btn {
   background-color: #4b6cb7;
   color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 
 .background-gradient-1 .btn:hover {
   background-color: #182848;
+  transition: all 0.3s ease-in-out;
 }
 
 .background-gradient-2 .btn {
   background-color: #833ab4;
   color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 
 .background-gradient-2 .btn:hover {
   background-color: #fd1d1d;
+  transition: all 0.3s ease-in-out;
 }
 

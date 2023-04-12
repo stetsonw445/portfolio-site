@@ -12,21 +12,54 @@ const body = document.querySelector('body');
 changeColorLink.addEventListener('click', toggleBackgroundGradient);
 const contactButton = document.getElementById('contact-button');
 const contactInfoTable = document.getElementById('contact-info-table');
-    
+
+const scrollToTopBtn = document.getElementById("scroll-to-top-btn");
+
+window.addEventListener("scroll", () => {
+  // Show the button when the user scrolls down 20px from the top
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+  // Smoothly scroll the page to the top
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
 contactButton.addEventListener('click', toggleTable);
       
 function toggleTable() {
   if(!isShowing) {
     contactInfoTable.style.display = 'table';
     contactButton.innerText = 'Hide Contact Info';
+    contactInfoTable.classList.add('spinning');
+    contactButton.classList.add('spinning');
+    const contactHeader = document.getElementById('contactHeader');
+    const contactSection = document.getElementById('contact');
+    contactSection.classList.add('spinning');
+    contactHeader.classList.add('spinning');
     isShowing = true;
   }
   else {
-    contactInfoTable.style.display = 'none';
     contactButton.innerText = 'Show Contact Info';
+    contactInfoTable.style.display = 'none';
+    contactInfoTable.classList.remove('spinning');
+    const contactHeader = document.getElementById('contactHeader');
+    const contactSection = document.getElementById('contact');
+    contactHeader.classList.remove('spinning');
+    contactButton.classList.remove('spinning');
+    contactSection.classList.remove('spinning');
     isShowing = false;
   }
 }
+
+
 
 function toggleBackgroundGradient() {
   isGradient1 = !isGradient1;
@@ -58,17 +91,10 @@ function toggleBackgroundGradient() {
 
 
 
-let header = document.getElementById('header');
-		let timeoutId = null;
-
-		header.addEventListener('mousemove', function(event) {
-			header.classList.add('animate');
-			clearTimeout(timeoutId);
-
-			timeoutId = setTimeout(function() {
-				header.classList.remove('animate');
-			}, 2000);
-		});
+window.addEventListener('load', () => {
+  const portfolioHeading = document.getElementById('header');
+  portfolioHeading.classList.add('spinning');
+});
 
 
     
