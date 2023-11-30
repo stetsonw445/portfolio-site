@@ -12,16 +12,22 @@ const body = document.querySelector('body');
 changeColorLink.addEventListener('click', toggleBackgroundGradient);
 const contactButton = document.getElementById('contact-button');
 const contactInfoTable = document.getElementById('contact-info-table');
-
+const navBar = document.getElementById('nav'); // Replace '.navbar' with the selector for your nav bar element
+const hideMenuBtn = document.getElementById("hideMenu");
+const showMenuBtn = document.getElementById("showMenu");
 const scrollToTopBtn = document.getElementById("scroll-to-top-btn");
 
 window.addEventListener("scroll", () => {
   // Show the button when the user scrolls down 20px from the top
   if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
     scrollToTopBtn.style.display = "block";
+    //navBar.style.display = 'none';
   } else {
     scrollToTopBtn.style.display = "none";
+    
   }
+  
+  //navBar.addEventListener('mouseover', toggleNavBarVisibility);
 });
 
 scrollToTopBtn.addEventListener("click", () => {
@@ -33,7 +39,9 @@ scrollToTopBtn.addEventListener("click", () => {
 });
 
 contactButton.addEventListener('click', toggleTable);
-      
+hideMenuBtn.addEventListener('click', toggleNavBarVisibility);  
+showMenuBtn.addEventListener('click', toggleNavBarVisibility);
+showMenuBtn.style.display = 'none';
 function toggleTable() {
   if(!isShowing) {
     contactInfoTable.style.display = 'table';
@@ -59,7 +67,18 @@ function toggleTable() {
   }
 }
 
+function toggleNavBarVisibility() {
+  
+  if(navBar.style.display === 'none') {
+    navBar.style.display = 'block';
+    showMenuBtn.style.display = 'none';
+  }
+  else {
+    navBar.style.display = 'none';
+    showMenuBtn.style.display = 'block';
+  }
 
+}
 
 function toggleBackgroundGradient() {
   isGradient1 = !isGradient1;
